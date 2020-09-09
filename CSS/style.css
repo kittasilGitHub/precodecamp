@@ -1,0 +1,78 @@
+#idName{
+    color: red;
+}
+.className{
+    color: greenyellow;
+}
+input:checked{
+    width: 15px;
+    height: 15px;
+}
+div:hover{
+    color: hotpink;
+}
+div::before{
+    content: "Hello world";
+}
+
+#tagH div{
+    color: yellowgreen;
+
+}
+
+#tagH span{
+    color: indianred;
+}
+
+p span{
+    color: darkgoldenrod;
+}
+
+p > span{
+    color: aqua;
+}
+
+/*.plusCombinator + div{
+    color: brown;
+}*/
+
+.plusCombinator ~ div{
+    color: burlywood;
+}
+
+input[type]{
+    color: blue;
+}
+
+input[type="password"]{
+    color: gray;
+}
+input[title*="this"]{
+    color: green;
+}
+
+#unit{
+    padding: 50;
+    font-size: 100mm;
+}
+
+
+@font-face{
+    font-family: Long_Cang;
+    src: url("../Long_Cang/LongCang-Regular.ttf");
+}
+
+.textAlign{
+    font-family: Long_Cang;
+    font-style: italic;
+    /*text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: red;*/
+}
+
+.listStyle{
+    border: solid 1px black;
+    list-style-type: circle;
+    list-style-position: inside;
+    /*list-style-image: url(https://png.pngtree.com/png-vector/20190330/ourlarge/pngtree-open-book-icon-design--stationery-icon-vector-design-png-image_900281.jpg);*/
+}

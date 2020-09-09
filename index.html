@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Structure</title>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
 <body>
+<hr>
 <h1>heading</h1>
     <h1>this is heading 1</h1>
     <h2>this is heading 2</h2>
@@ -103,6 +105,96 @@
         <input type="email"><br>
         <input type="password"><br>
     </form>
+<hr>
+<h2>inline css</h2>
+<h1 style="color: red;">test tag A</h1>
+<hr>
+<h1>External CSS</h1>
+<h1 id="idName">this tag have id that is idName</h1>
+<h1 class="className">this tag have class that is className</h1>
+<hr>
+<h1>pseudo class</h1>
+<form>
+    <input type="checkbox" checked>one</input>
+    <input type="checkbox" checked>two</input>
+    <input type="checkbox" checked>three</input>
+</form>
+<div>
+    This is paragraph1
+</div>
+<div>
+    This is paragraph2   
+</div>
+<div>
+    This is paragraph3
+</div>
+<hr>
+<h1>pseudo element</h1>
+<div>
+    This is paragraph4
+</div>
+<hr>
+<h1>Combinator</h1>
+    <h3 id="tagH">
+        <div>
+            div1 item in tagH
+            <div>div2 item in tag div</div>
+            <div>div3 item in tag div</div>
+            <div>div4 item in tag div</div>  
+            <div>div5 item in tag div</div>                    
+        </div>
+        <span>span1 item in tagH</span>
+        <span>span2 item in tagH</span>
+        <span>span3 item in tagH</span>                
+    </h3>
+    <p>
+        <span>span1 in tag p</span>
+        <span>span2 in tag p</span>
+        <span>
+            <span>span1 in span</span>
+            <span>span2 in span</span>
+            <span>span3 in span</span>
+        </span>
+    </p>
+<hr>
+<h1>plus Combinator</h1>
+<div class="plusCombinator">div in tag div class plusCombinator</div>
+<div>div tag under div class plusCombinator</div>
+<div>div tag under div class plusCombinator</div>
+<div>div tag under div class plusCombinator</div>
+<div>div tag under div class plusCombinator</div>
+<div>div tag under div class plusCombinator</div>
+
+<hr>
+<h1>attribute selector</h1>
+<form>
+    <input type="text" title="inputForm"><br>
+    <input type="color" title="input this-color"><br>
+    <input type="date" title="input-Form"><br>
+    <input type="email" title="input_Form"><br>
+    <input type="file" title="input//Form"><br>
+    <input type="password" title="input Form"><br>
+    <input type="search" title="this input search"><br>
+</form>
+
+<hr>
+<h1>Unit</h1>
+<div id="unit"> content </div>
+
+<hr>
+<h1>Decorator</h1>
+<p class="textAlign">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, voluptatem? Aut, eligendi deserunt tenetur, quod eos illum ex reiciendis eaque culpa similique optio unde nostrum iusto provident sequi voluptatum. Eaque! <br>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt hic recusandae debitis, ad atque ducimus temporibus distinctio maxime doloremque. Quasi nesciunt cumque itaque iste dolor consequuntur autem ipsam culpa? Nesciunt! <br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sit inventore quos numquam quibusdam distinctio voluptatum impedit. Ipsam, magnam dolorem. Neque officia accusamus impedit tenetur in nobis vel eveniet rem? <br>
+</p>
+<ul class="listStyle">
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+    <li>list4</li>
+</ul>
+
+
 
 </body>
 
