@@ -144,3 +144,43 @@ body{
     text-align: center;
     margin: 10px;
 }
+
+
+.classNameAnimation{
+    animation-name: name;
+    animation-duration: 5s;
+    width: 200px;
+    color: grey;
+    background-color: skyblue;
+}
+
+@keyframes name{
+    from{
+        background-color: skyblue;
+        height: 300;
+        width: 300;
+        
+    }
+    to{
+        background-color: black;
+        margin-left: 100px;
+    }
+
+} 
+
+
+/* @keyframes name{
+    0% {
+        background-color: peachpuff;
+    }
+    25% {
+        background-color: red;
+    }
+    50% {
+        background-color: peachpuff;
+    }
+    100% {
+        background-color: darkblue;
+    } 
+}
+*/
