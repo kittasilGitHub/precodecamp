@@ -1,6 +1,6 @@
 .container{
     display: flex;
-    /* flex-direction: column ; */
+    flex-direction: row ;
     /* flex-direction: column-reverse; */
     /* flex-direction: row; */
     /* flex-direction: row-reverse; */
@@ -34,8 +34,8 @@
     /* default order = 0 */
 
     /* flex-grow: 30; */
-    /* flex-shrink: 50; */
-    flex-basis: 400px;
+    flex-shrink: 20;
+    /* flex-basis: 400px; */
     flex: 30 50;
 
 }
