@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        // let i=0;
+        // while(i<3){
+        //     console.log(i);
+        //     i++;
+        // }
+        // console.log("Bye");
+
+        // let txt = prompt("Enter text to show");
+        // document.querySelector("#p1").innerText = txt;
+        // let txt2 = prompt("Enter text to show");
+        // document.querySelector("#p2").innerText = txt2;
+
+        // // while loop
+        // let passcode = "";
+        // let i = 0;
+        // while(passcode !== "Codecamp"){
+        //     passcode = prompt("Enter passcode:")
+        //     i++;
+        //     console.log(`Number of tries = ${i}`);
+        // }
+        // document.querySelector("#p1").innerText = "OK, Password is correct";
+
+
+        // // for loop
+        // let passcode = "";
+        // let i = 0;
+        // for(i=0; i<3; i++){
+        //     passcode = prompt("Enter passcode:");
+        //     if(passcode === "Codecamp"){
+        //         document.querySelector("#p1").innerText = "OK, passcode is correct";
+        //         break;
+        //     }
+        //     console.log("number of tries = "+ i);
+        // }
+        // if(i === 3){
+        //     document.querySelector("#p1").innerText = "passcode is wrong more than 3 times, System Lock"
+        // }
+
+        // // nest for 
+        // for(let m=1; m<3; m++){
+        //     for(let n=1; n<5; n++){
+        //         console.log(m + " " +n);
+        //     }
+        //     console.log('-------')
+        // }
+
+        // // loop inner html
+        // for(let m=1; m<13; m++){
+        //     for(let n=1; n<13; n++){
+        //         document.querySelector("#p1").innerHTML += `${m} x ${n} = ${m*n}<br>`;
+        //     }
+        //     document.querySelector("#p1").innerHTML+= "<hr>";
+        // }
+
+        // // break
+        // let sum = 0;
+        // while(true){
+        //     let value = Number(prompt("Enter number:", " "));
+        //     if(!value){
+        //         break;
+        //     }
+        //     sum += value
+        // }
+        // alert("Sum: "+sum);
+
+        //// continue
+        // for(let i=0; i<10; i++){
+        //     if( i % 2 === 0){
+        //         continue;
+        //     }
+        //     console.log(i);
+        // }
+
+        // // switch case
+        // let a = 2 + 2;
+        // switch(a){
+        //     case 4 : {
+        //         console.log("case 4");
+        //         console.log("using switch case");
+        //         break;
+        //     }
+        //     case "5" : {
+        //         console.log("case 5")
+        //         console.log("using switch case")
+        //         break;
+        //     }
+        //     default : {
+        //         console.log("default case");
+        //         console.log("using switch case");
+        //     }
+        // }
+
+        // // function 
+        // let username = prompt("Enter user name:");
+        // function show2() {
+        //     console.log("Hello "+username);
+        // }
+        // show2();
+
+        // function showMessage(from, text = "No text") {
+        //     alert(from + ": " + text)
+            
+        // }
+        // showMessage('Ann');
+
+        
+        // function sum(n1, n2) {
+        //     return n1 + n2;   
+        // }
+        // let result = sum(10,20);
+        // console.log(result);
+
+        // let age = prompt("How old are you?", 18);
+        // function checkAge(age) {
+        //     if(age >= 18){
+        //         return true;
+        //     }
+        //     else{
+        //         return confirm("Do you have permission from your parents?");
+        //     }
+        // }
+        // function showMovie(age) {
+        //     if( !checkAge(age) ){
+        //         return; // ออกจากฟังก์ชัน
+        //     }
+        //     alert("Showing you the movie");
+        // }
+        // showMovie(17);
+
+        // // function expression
+        // let sayHi = function() {
+        //     alert("Hello");
+        // }
+        // sayHi();
+        // let func = sayHi; // กำหนดค่าเป็น function
+        // func();
+
+        // // callback function ฟังก์ชันที่สามารถรับพารามิเตอร์ที่เป็นฟังก์ชันได้
+        // function ask(question, yes, no) {
+        //     if(confirm(question)){
+        //         yes();
+        //     }
+        //     else no();
+            
+        // }
+        // function showOk(params) {
+        //     alert("You agreed.");
+        // }
+        // function showCancle(params) {
+        //     alert("You canceled the execution.");
+        // }
+        // ask("Do you argee?", showOk, showCancle);
+
+        // // arrow function
+        // let sum = function (a,b) { // เขียนแบบธรรมดา
+        //     return a+b;
+        // }
+        // let sum2 = (a,b) => a+b; // เขียนแบบ arrow function
+        // console.log(sum(1,2));
+        // console.log(sum(1,2));
+
+        // let double = function(n) {
+        //     return n*2;
+            
+        // }
+        // let double2 = n => n*2; // ถ้าพารามิเตอร์มีตัวเดียวสามารถนำวงเล็บออกได้เลย
+        // console.log(double(2));
+        // console.log(double2(2));
+
+        // let sayHi = () =>{ // ถ้าในฟังก์ชันมีหลายๆ คำสั่งต้องใช้ { }
+        //     console.log("Hello");
+        //     console.log("Hi");
+        // }
+        // sayHi();
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

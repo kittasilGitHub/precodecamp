@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>JS variable</p>
+    <script>
+        let msg = "Codecamp Thailand 5-6-7";
+        console.log(msg);
+        msg = "Hello";
+        console.log(msg);
+        let age = 35;
+        console.log(age);
+        let number;
+        number = 20;
+        console.log(number);
+        console.log(number+10);
+        // let name = "john", surname = "locky";
+        // console.log(name,surname);
+        const foo = "initial value";  // const ต้องกำหนดค่าเริ่มต้น
+        console.log(foo);
+        // foo = "new value";  // จะเกิด error
+        let greeting = "Hello";
+        mgs = greeting;
+        greeting = "Hallo";
+        console.log(msg, greeting);
+        let human;
+        let name = "kittasil";
+        human = name;
+        console.log(human);
+        let money = 100;
+        let fatherName = "weerachai";
+        let motherName = "sureerat";
+        let address    = "phuket";
+        let str = "Hello";
+        let str2 = "JavaScript";
+        console.log(str+ " " +str2);
+        let isCheck = true;
+        console.log(isCheck);
+        console.log(typeof isCheck); // ตรวจสอบชนิดตัวแปร
+        let message1 = "software park";
+        let message2 = "Codecamp";
+        let message3 = "sonter";
+        let message4 = `sonter is in ${message1} ${message2}`; // use Back quote (`) => alt+96
+        console.log(message4); 
+        let x = 5;
+        let y = 10;
+        if (x > y){
+            console.log("true");
+        }
+        else{
+            console.log("false");
+        }
+        let cart = null;
+        console.log(cart);
+
+        let name2 = "Codecamp";
+        console.log(`hello ${1}`);
+        console.log(`hello ${"name2"}`);
+        console.log(`hello ${name2}`);
+        // Type conversion
+        let b1 = true;
+        let s1 = String(b1);
+        console.log(s1);
+        console.log(typeof s1);
+        let s2 = "123";
+        let s3 = "456";
+        let n1 = Number(s2);
+        let n2 = Number(s3);
+        let n3 = n1 + n2;
+        console.log(n3);
+        let age2 = prompt("how old are you?", 0);
+        alert(age2);
+
+        function draw(n) {
+            let star = "";
+            for(let i = 0; i < n; i++){
+                star += "*";
+            }
+            console.log(star);
+        }
+
+        function draw2(n) {
+            let star = "";
+            for(let i=0; i<n; i++){
+                star +="*";
+            }
+            for(let j=0; j<n; j++){
+                console.log(star);
+            }
+            
+        }
+
+        let currentUser = prompt("Current User:");
+        let defaultUser = prompt("Default User:");
+        let userName = currentUser || defaultUser || "Unknow";
+        console.log(userName);
+
+        let inputX = prompt("Input X");
+        (x>0) && console.log("มากกว่า 0");
+
+
+    </script>
+    
+</body>
+</html>

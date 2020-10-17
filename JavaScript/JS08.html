@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // วิธีการเขียน code และ comment
+        // /**
+        //  * Returns x raised to the n-th power.
+        //  *
+        //  * @param {number} x The number to raise.
+        //  * @param {number} n The power, must be a natural number.
+        //  * @return {number} x raised to the n-th power.
+        // **/
+
+        // function pow(x, n) {
+        //     let result = 1;
+        //     for(let i = 0 ; i < n; i++){
+        //         result *= x;
+        //     }
+        //     return result;
+        // }
+
+        // let x = prompt("x?", '');
+        // let n = prompt("n?", '');
+
+        // if (n <= 0) {
+        //     alert(`Power ${n} is not supported, please enter an integer number greater than zero`);
+        // } else {
+        //     alert( pow(x,n) );
+        // }
+
+        // Babel การแปลง code จากเวอร์ชันใหม่เป็นเวอร์ชันเก่า
+        // Polyfills การสร้างฟังก์ชันในเวอร์ชันใหม่ และแปลงเป็นเวอร์ชันเก่า
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+        // // Object (สำคัญมากใน JavaScript)
+        // // ใน javaScript มี Data type คือ string, boolean, bigint, number, null, undefined และ object
+        // // โดย 6 ประเภทนี้จะเรียกว่า primitive
+        // let user = {
+        //     name: "John",  // properties key : value
+        //     age: 30,
+        //     "computer skill" : null // key สามารถมีช่องว่างได้แต่ต้องใส่ " "
+        // };
+
+        // alert(user.name);
+
+        // user.height = 176; // สามารถเพิ่ม properties ให้กับ object ได้
+        // alert(user.height);
+        // console.log(user);
+
+        // delete user.height; // เป็นการลบ properties ออกให้กับ object
+        // console.log(user);
+
+        // alert(user["computer skill"]); // การเรียก properties ที่มีช่องว่าง
+        // user["likes bird"] = true; // การเพิ่ม properties ที่ key มีช่องว่าง ให้กับ object
+        // delete user["likes birds"]; // การลบ properties ให้กับ object
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////
+
+        // // การสร้าง object มี 2 วิธี
+        // // 1)  let user = new Object(); //แบบ Object constructor  
+        // // 2)  let user = {}; //แบบ Object Iteral
+        // let human = {
+        //     name: "sonter",
+        //     age: 19,
+        //     "home address": "Thai land",
+        //     isSingle: false,
+        //     clever: 9.9987
+        // };
+        // console.log(human);
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////
+
+        // // Computed Properties กำหนดค่า key จากตัวแปร
+        // let propertiesName = "age";
+
+        // let obj = {
+        //     propertiesName: 20,
+        // };
+        // console.log(obj);
+        // alert(obj.propertiesName);
+
+        // let obj2 = {
+        //     [propertiesName]: 20,
+        // };
+        // console.log(obj2);
+        // alert(obj2.age);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+
+        // // Property value shorthand การนำเอาตัวแปรมากำหนดเป็น key ของ object
+        // let name = "Sonter";
+        // let age = 19;
+        // let obj = {
+        //     name,
+        //     age
+        // };
+        // console.log(obj.name);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////        
+
+        // การทดสอบการมีอยู่ของ key โดยใช้คำสั่ง in
+        // let user = {
+        //     name: "John",
+        //     age: 30
+        // };
+        // alert( "age" in user);
+        // alert( "blabla" in user);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////   
+
+        // // การดึงค่าแต่ละ key ของ object โดยใช้ in ใน for ... loop
+        // let user = {
+        //     name: "Sonter",
+        //     age: 19,
+        //     address: "Thailand",
+        //     skill: "JS"
+        // };
+        // for(let key in user) {
+        //     console.log(key);
+        //     console.log(key+ ": " +user[key]);
+
+        // }
+        
+        // let code = {
+        //     "49" : "Germany",
+        //     "41" : "Switzerland",
+        //     "44" : "Great Britain",
+        //     "1"  : "USA"
+        // };
+        // for(let key in code) {
+        //     console.log(key+ ": " +code[key]);
+        // }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////   
+
+        // // primitive (ประเภทตัวแปร) VS object
+        // // primitive จะ copied by value
+        // // object จะ copied by reference
+        // let message = "hello";
+        // let pharse = message;
+        // console.log(message);
+        // console.log(pharse);
+        // message = "hello2";
+        // console.log(message);
+        // console.log(pharse);
+
+        // let user = {
+        //     name: "John"
+        // };
+        // let admin = user;
+        // console.log(user.name);
+        // console.log(admin.name);
+
+        // user.name = "John2";
+        // console.log(user.name);
+        // console.log(admin.name); 
+        
+        ////////////////////////////////////////////////////////////////////////////////////////////////   
+
+        // // object ที่ประกาศด้วย const จะสามารถเปลี่ยนแปลงได้แค่ value แต่จะไม่สามารถเปลี่ยนแปลง key ได้
+        // const user = { 
+        //     name: "Sonter"
+        // };
+        // console.log(user.name);
+        // user.name = "Sonter2";
+        // console.log(user.name);
+
+        // // user = {
+        // // };  // จะเกิด error เพราะเปลี่ยนแปลง user
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////   
+
+        // // cloning and merging, Object.assign
+        // // cloning ทำให้ object มี reference ที่ต่างกัน
+        // let user = {
+        //     name: "Sonter",
+        //     age: 19,
+        //     skill: "JS"
+        // };
+        // let admin = {};
+        // for(let key in user) {
+        //     admin[key] = user[key];
+        // }
+        // console.log(user);
+        // console.log(admin); // user กับ admin จะ reference คนละที่กัน ดังนั้นการเปลี่ยนแปลงที่ user จะไม่มีผลต่อ admin และการเปลี่ยนแปลงที่ admin ไม่มีผลต่อ user
+        // user.name = "Sonter2"
+        // console.log(user.name);
+        // console.log(admin.name);
+
+        // // คำสั่งที่ใช้ในการ cloning คำสั่ง Object.assign()
+        // let obj = {
+        //     name: "Sonter",
+        //     age: 19,
+        //     skill: "JS"
+        // };
+        // let obj2 = Object.assign({},obj);
+        // console.log(obj);
+        // console.log(obj);
+
+        // let obj1 = {
+        //     name: "Sonter"
+        // };
+        // let obj2 = {
+        //     name: "Codecamp",
+        //     age: 19
+        // };
+        // let obj3 = {
+        //     name: "Jaing",
+        //     skill: "JS"
+        // }
+        // let obj4 = Object.assign(obj1, obj2, obj3);  // obj3 จะใส่ใน obj2 โดย key ไหนที่ซ้ำกันก็จะแทนค่า key ไหนที่ไม่มีก็ใส่เพิ่ม
+        // /*obj3 + obj2 ={
+        //     name: "Jaing",
+        //     age: 19,
+        //     skill: "JS"
+        // }*/ // นำค่าที่ได้ใน obj3 + obj2 ไปใส่ใน obj1
+        // console.log(obj1)
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////        
+
+        // // excerise
+        // // 1)
+        // let obj = {};
+        // obj.name = "Sonter";
+        // console.log(obj);
+        // obj.surname = "Pakorn";
+        // console.log(obj);
+        // delete obj.name;
+        // console.log(obj);
+
+        // // 2)
+        // function isEmpty(obj) {
+        //     for(let key in obj){
+        //         return false;
+        //     }
+        //     return true;
+        // }
+        // let obj = {};
+        // console.log(isEmpty(obj));
+
+        // // 3)
+        // let salaries = {
+        //     John: 100,
+        //     Ann: 160,
+        //     Pete: 130
+        // };
+        // function sum(obj) {
+        //     let sumSalary = 0;
+        //     for(let key in obj) {
+        //         sumSalary += obj[key];
+        //     }
+        //     return sumSalary;
+        // }
+        // let result = sum(salaries);
+        // console.log(result);
+
+        // // 4)
+        // let menu = {
+        //     width: 200,
+        //     height: 300,
+        //     title: "My menu"
+        // };
+        // function multiplyNumeric(obj, times) {
+        //     for(let key in obj) {
+        //         if (typeof obj[key] !== "number")
+        //             continue;
+        //         obj[key] *= times;
+        //     }
+        // }
+        // multiplyNumeric(menu, 2);
+        // console.log(menu);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////        
+
+        // // Gabage Collection เป็นตัวที่ช่วยกำจัดตัวแปรที่ไม่สามารถเข้าถึงได้แล้วให้โดยอัตโนมัติ
+        // let user = {
+        //     name: "Sonter";
+        // }
+        // user = null; // ลบค่า object ทำให้ไม่เปลืองหน่วยความจำ
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////  
+
+        // // method ฟังก์ชันที่อยู่ใน object
+        // let user = {
+        //     name: "Sonter",
+        //     callName: function () {
+        //         alert(name);
+        //     }
+        // };
+
+        // // หรือสามารถทำในรูปแบบนี้ได้
+        // function sayHello() {
+        //     console.log("Hello");
+        // }
+        // let obj = {
+        //     name: "Sonter",
+        // };
+        // obj.sayHello = sayHello;
+        // console.log(obj);
+
+        // // method แบบ shorthand
+        // function sayHi() {
+        //     console.log("Hi");
+        // }
+        // let obj2 = {
+        //     name: "Sonter",
+        //     sayHi
+        // };
+        // console.log(obj2);
+
+        // // this คีย์เวิร์ดใน method หมายถึง object ตัวนั้น
+        // let user = {
+        //     name: "John",
+        //     age: 30,
+        //     sayHi(){
+        //         console.log(this.name); // หมายถึง name ที่อยู่ใน user
+        //     }
+        // }
+        // console.log(user.sayHi());
+
+
+        // let calculator = {
+        //     read(){
+        //         this.number1 = Number(prompt("Enter number1:"));
+        //         this.number2 = Number(prompt("Enter number2:"));
+        //     },
+        //     sum(){
+        //         return this.number1 + this.number2;
+        //     },
+        //     mul(){
+        //         return this.number1 * this.number2;
+        //     }
+        // };
+        // calculator.read();
+        // alert(calculator.sum());
+        // alert(calculator.mul());
+
+        // let ladder = {
+        //     step: 0,
+        //     up() {
+        //         this.step++; // step ที่อยู่ใน ladder
+        //         return this; // return เป็น object ladder
+        //     },
+        //     down() {
+        //         this.step--;
+        //         return this;
+        //     },
+        //     showStep() {
+        //         alert(this.step);
+        //         return this;
+        //     }
+        // };
+        // console.log(ladder.up().up().down().showStep());
+        
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////  
+
+        // constructor function 
+        function User(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        /* // ฟังกืชัน User ที่เขียนข้างบนเปรียบได้กับข้างล่างดังนี้
+        function User(name, age) {
+            this = {},
+            this.name = name;
+            this.age = age;
+            return this;
+        }/*
+        let user = new User("Sonter", 19)
+        console.log(user2);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
