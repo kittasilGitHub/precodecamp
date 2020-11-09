@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // ตัวแปรตัวเลข Number
+        // // e คือ 10 ยกกำลัง เช่น 1e6 = 10^6 = 1000000
+        // console.log(1e6);
+        // console.log(1e-2);
+        // console.log(0b11111111); // เลขฐาน 2
+        // console.log(0o377); // เลขฐาน 8
+        // console.log(0xff); // เลขฐาน 16
+        // // num.toString(base) แปลงเลขฐาน
+        // let num = 255;
+        // console.log(num.toString(16));
+        // console.log(num.toString(8));    
+        // console.log(num.toString(2));
+
+        // // การปัดเศษ Rounding
+        // console.log(Math.pow(2,2));
+        // console.log(Math.floor(3.6)); // ปัดลง
+        // console.log(Math.ceil(3.4)); // ปัดขึ้น
+        // console.log(Math.round(1.5)); // เกิน .5 ปัดขึ้น ไม่เกินปัดลง
+        // console.log(Math.trunc(10.25)); // เอาแต่เลขจำนวนเต็ม  ใช้ใน internet exprolor ไม่ได้
+        // let num = 1.23456;
+        // alert(Math.floor(num*100)/100);
+
+        // // กำหนดจุดทศนิยม
+        // let num = 1.23456;
+        // alert(num.toFixed(2)); // กำหนดทศนิยม 2 ตำแหน่ง
+
+        // // isFinite and isNaN  (NaN = Not a Number)
+        // console.log(1*"a");
+        // alert(isNaN(1*"a"));   // isNaN ตรวจสอบว่าไม่ใช่ตัวเลขหรือไม่ 
+        // alert(isFinite(15));   // isFinite ตรวจสอบว่าเป็น infinity หรือไม่
+        // alert(isFinite(1e309));
+
+        // // parseInt and parseFloat
+        // // parseInt รับข้อความมาแปลง string ให้กลายเป็นตัวเลขจำนวนเต็ม
+        // // parseFloat รับข้อความมาแปลง string ให้กลายเป็นค่าจำนวนจริง
+        // alert(parseInt('100px'));
+        // let str = "156.46";
+        // console.log(parseInt(str)); // 156
+        // console.log(parseInt(str,16)); // แปลงเป็นฐาน 16
+        // console.log(parseFloat(str)); // 156.46
+
+        // // Random
+        // console.log(Math.random()); // 0 - 1
+        // console.log(Math.floor(Math.random()*10 + 1)); // 0 - 10
+        // function getRndInteger(min, max) {
+        //     return Math.floor(Math.random() * (max - min) + 1) + min;
+        // }
+        // console.log(getRndInteger(10, 20));
+
+        // // Math.max , Math.min
+        // console.log(Math.max(10,20,30));
+        // console.log(Math.min(10,20,30));      
+
+
+        // // String 
+        // // การสร้างข้อความสามารถใช้ได้ทั้ง "xxxx"  , 'xxxx' , `xxxx` (backtick)
+        // let s1 = "Codecamp";
+        // let s2 = 'Thailand';
+        // let s3 = `bkk`;
+        // let s4 = `Codecamp
+        // Thailand
+        
+        // BKK`;
+        // console.log(s1);
+        // console.log(s2);
+        // console.log(s3);
+        // console.log(s4);
+
+        // let number = 20;
+        // let s5 = `Number is ${number}`; // backticjs จะอนุญาติให้เรสใช้ ${...} เพื่อใส่ค่า Expression
+        // console.log(s5);
+
+        // let s6 = "Codecamp\nThailand\nBKK"; // อักษรพิเศษ \", \', \t, \b เป็นต้น
+        // console.log(s6);
+
+        // // unicode character \xXX  e.g. \x7A แสดงค่า 'z' \uXXXX
+        // // ASCII
+        // let s7 = '\u0e01';
+        // console.log(s7);
+        // let s8 = '\u{1f4b8}';
+        // console.log(s8);
+
+        // let s9 = "CodeCamp Thailand";
+        // console.log(s9.length);  // ความยาวของข้อความ 17 ตัว
+        // console.log("ทั้ง".length); // 4
+
+        // // Accessing character
+        // let s10 = "CodeCamp Thailand";
+        // console.log(s10[1]); // o
+        // console.log(s10[8]); // ช่องว่าง
+        // console.log(typeof s10);
+        // console.log(s10[-1]); // undefine
+
+        // // for...of
+        // let s11 = "Codecamp Thailand";
+        // let s12 = "";
+        // for(let str of s11) {
+        //     s12 +=str;
+        // }
+        // console.log(s12);
+
+        // //String ไม่สามารถเปลี่ยนข้อมูลได้
+        // let s13 = "Codecamp Thailand";
+        // s13[4] = 'x';
+        // console.log(s13); // Codecamp Thailand ไม่สามารถเปลี่ยนค่าได้
+
+        // //toLowCase() toUpperCase()
+        // let s14 = "codecamp thailand";
+        // console.log(s14.toUpperCase());
+
+        // // ค้นหาข้อความ indexOf("substring") ระบุเป็นตำแหน่งเริ่มต้นของ substring
+        // let str = 'Widget with flutter';
+        // alert(str.indexOf('Widget'));  // 0
+        // alert(str.indexOf('id')); //1
+        // // LastIndexOf ค้นหาจากท้ายประโยค
+        // alert(str.lastIndexOf('id'));
+        
+        // let i = 0;
+        // let n = 0;
+        // while(true) {
+        //     i = str.indexOf('hello', i);   // เริ่มค้นหาจากตำแหน่งที่ i 
+        //     if(i<0){
+        //         break;
+        //     }
+        //     console.log(i);
+        //     i++;
+        //     n++;
+        // }
+        // (i == 0)? console.log("Not Found") : console.log("amount : " + n);
+
+
+        // // slice ข้อความย่อย
+        // let str = 'Widget with flutter';
+        // console.log(str.slice(10));
+        // console.log(str.slice(2,9));
+        
+        // // การเปรียบเทียบอักษร
+        // console.log(String.fromCharCode(97)); // "a"
+        // console.log("a".charCodeAt()); // 97
+        // console.log(str.includes("flutter")); // true
+        // console.log(str.replace("flutter", "native react")); // Widget with native react
+
+        // console.log("รู้" === "รู้");    // ร -  ู -  ้
+        // console.log("รู้" === "รู้");    // ร -  ู -  ้    จะไม่เท่ากับ ร -  ้ -  ู
+
+
+        // // Array สามารถเก็บ number string object หรือ function ก็ได้
+        //  let dayName = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+        // dayName[7] = "goodday";
+        // console.log(dayName);
+        // let array1 = new Array("A", "B", "C");
+        // console.log(array1);
+        // console.log(dayName[4]);
+        // console.log(dayName.length);
+        // for(let i=0; i<dayName.length; i++){
+        //     console.log(dayName[i]);
+        // }
+        // let Array2 = [
+        //     function(){alert("Hello")},
+        //     function(){alert("Hello2")},
+        //     function(){alert("Hello3")}
+        // ]
+        // Array2[0](); // ต้องใส่ ()
+        // for(let i=0; i<Array2.length; i++)
+        //     Array2[i]();
+
+
+        // let products = [
+        //     {pname : "Apple", price : 100},
+        //     {pname : "Orange", price : 200},
+        //     {pname : "Grape", price : 300}
+        // ]
+        // console.log(products[0]);
+        // for(let i=0; i<products.length; i++){
+        //     console.log(products[i].pname + '\t' + products[i].pname);
+        // }
+
+        // dayName.push("workday");
+        // console.log(dayName); // ใส่ค่าให้ array
+        // dayName.pop();
+        // console.log(dayName); // เอา index สุดท้ายออก
+        // dayName.splice(4,1); // เอา index ที่ 4 ออก 1 ตัว
+        // console.log(dayName);
+        // dayName.shift(); // เอา index แรกออก
+        // console.log(dayName);
+        // dayName.splice(2,0,"complex", "language"); // แทรกข้อมูลลงใน index ที่กำหนด
+        // console.log(dayName);
+        // console.log(dayName.slice(2,4));
+        // console.log(dayName); // slice ไม่มีผลต่อ array
+        // let arr1 = ["hello"];
+        // let arr2 = ["world"];
+        // let arr3 = arr1.concat(arr2); // ต่อ array
+        // console.log(arr3);
+
+
+        // // foreach  / forof
+        // let dayName = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+        // dayName.forEach(function(x, i){
+        //     console.log(i + ":" + x);
+        // });
+
+        // for(let x of dayName){
+        //     console.log(x);
+        // }
+
+        // // find  / findIndex
+        // let users = [ 
+        //     {id : 1, name: "John"},
+        //     {id : 2, name: "Peter"},
+        //     {id : 3, name: "Mary"},
+        // ];
+
+        // let user = users.find(item => item.id == 1); // รูปแบบ arrow function
+        // // let user = users.find( function(item){ // รูปแบบ call back function
+        // //     return (item.id == 1);
+        // // });
+
+        // console.log(user.name);
+
+        // let products = [
+        //     {pname : 'Apple', price : 100},
+        //     {pname : 'Orange', price : 200},
+        //     {pname : 'Grape', price : 300},  
+        //     {pname : 'Banana', price : 400}     
+        // ];
+        // let p1 = products.find(item => item.price > 200); 
+        // console.log(p1); // {pname : 'Grape', price : 300} เลือกตัวแรกที่ตรงเงื่อนไข
+        // let p2 = products.find(item => item.price > 100);
+        // console.log(p2);
+        // let p3 = products.findIndex(item => item.price === 200); // return เป็น index
+        // console.log(p3); // 1
+
+        // // filter
+        // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+        // const result = words.filter(item => item.length > 6); // หาทั้งหมดที่ตรงกับเงื่อนไข
+        // console.log(result);
+        // for(let i of result){
+        //     console.log(i);
+        // }
+
+        // // map
+        // let fruits = ["Apple", "Orange", "Plum"];
+        // let m = [];
+        // m = fruits.map( item => item.length); // สิ่งที่ return คือ item.length
+        // console.log(m);
+
+        // // sort
+        // let arr  = [7, 8, 9, 2, 3, 10, 20, 1, 25]; // sort ตัวเลข
+        // function compare(a, b) {
+        //     if (a>b) return 1;
+        //     if (a==b) return 0;
+        //     if (a<b) return -1;
+        // }
+        // // function compare(a, b){
+        //     // return (a>b) ? 1 : (a<b)? -1 : 0; // เขียนแบบย่อ
+        // //}
+        // console.log(arr.sort(compare)); // callback function
+
+        // let fruits = ["Apple", "Orange", "Plum", "Banana"];
+        // console.log(fruits.sort());
+
+        // let thw = ["เด็ก", "อก", "เสมา", "สนาม", "สะดม"]; // sort ภาษาไทย
+        // console.log(thw.sort((a,b) => a.localeCompare(b))); // localcompare
+
+
+        // // reverse
+        // let arr = [1,2,3,4,5];
+        // console.log(arr.reverse());
+
+        // // split / join
+        // let fruits = "Apple, Orange, Plum, Banana";
+        // let arr = fruits.split(", ");
+        // let result = arr.map(item => `To ${item.toLocaleUpperCase()}` );
+        // console.log(arr);
+        // console.log(result);
+        // console.log(result.join("-"));
+
+
+        // // exe
+        // let array1 = [1, 2, 30, 400];
+        // let array2 = array1.map(item => item*2);
+        // console.log(array2);
+
+        // // Iterable
+        // let fruits = "Apple, Orange, Plum, Banana";
+        // for(let s of fruits){  // for of กับ string
+        //     console.log(s);
+        // }
+
+        // let days = ["mon", "tue", "wed", "thr", "fri", "sat", "sun"];
+        // days.forEach(    // forEach กับ Array
+        //     function(item){
+        //         console.log(item);
+        //     }
+        // );
+        // for(let d of days){  // for of กับ Array
+        //     console.log(d);
+        // }
+
+        // let users = {
+        //     name : "John",
+        //     age : 24
+        // };
+        // for(let key in users){   // for in กับ object วนเพื่อดึงค่า key
+        //     console.log(users[key]);
+        // }
+
+
+        // // Map / Set
+        // let obj_user = {     // object  คีย์จะต้องเป็น String เท่านั้น
+        //     name : "John",
+        //     age : 24,
+        //     gender : "male",
+        //     from : "bkk"
+        // };
+        // console.log(obj_user);
+
+        // let map_user = new Map(  // Map สามารถใช้ key รูปแบบอื่นๆ ได้
+        //     [
+        //         ['name', 'john'],
+        //         ['age', 24],
+        //         ['gender', 'male'],
+        //         ['from', 'bkk']
+        //     ]);
+        // console.log(map_user);
+        // map_user.set('name', 'jack');
+        // console.log(map_user);
+        // map_user.set(true, 'single');
+        // console.log(map_user);
+        // console.log(map_user.get("age"));
+        // console.log(map_user.get(true));
+        // map_user.delete('gender');
+        // console.log(map_user);
+
+        // map_user.forEach(function(value, key){
+        //     console.log(key + ": " + value);
+        // });
+
+        // // แปลง object เป็น Map
+        // let obj = {
+        //     name: "John",
+        //     age: 24
+        // };
+        // let mp = new Map(Object.entries(obj));
+        // console.log(mp);
+
+
+        // // Set เป็น Collection ชนิดพิเศษที่เก็บเฉพาะ value ไม่มี key
+        // // Set จะไม่เก็บค่าที่ซ้ำ
+        // let s = new Set([1, 2, 3, 4, 5, "A"]);   // ไม่สามารถเข้าถึง index ได้
+        // s.add("B");
+        // s.forEach(v => console.log(v));
+        // s.delete(2);
+        // s.forEach(v => console.log(v));
+        // s.add(1); // ไม่เก็บค่าที่ซ้ำกัน 
+        // console.log(s);
+
+        // let set = new Set();
+        // let john = { name: "John"};
+        // let pete = { name: "pete"};
+        // let marry = { name: "marry"};
+
+        // set.add(john)
+        // set.add(pete);
+        // set.add(marry);
+        // set.add(john)
+        // set.add(pete);
+        // set.add(marry);
+
+        // console.log(set.size);
+
+        // for(let user of set){
+        //     console.log(user.name);
+        // }
+
+        // console.log(set.has(john)); // มีค่า john หรือไม่
+
+
+        // // key values entries
+        // let prices = {
+        //     A : 100,
+        //     B : 200,
+        //     C : 300
+        // };
+        // console.log(Object.values(prices).map(item => item*0.9));
+
+
+        // // arrow function
+        // let sum =  (a,b) =>{
+        //     let result = a+b;
+        //     return result;
+        // };
+        // console.log(sum(7,9));
+
+        // let sumOneLine = (a,b) => a+b;
+        // console.log(sumOneLine(7,9));
+
+        // import and export
+        // import นำตัวแปรหรือฟังก์ชันจาก module อื่นๆ มาใช้
+        // export ต้องการให้ตัวแปรหรือฟังก์ชันนี้สามารถนำไปใช้นอก module ได้
+
+
+
+
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

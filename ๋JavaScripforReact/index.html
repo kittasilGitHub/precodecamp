@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // // function sum(a, b) {
+        // //     return a + b;
+        // // }
+        // // alert(1,2,3,4); // สามารถใส่พารามิเตอร์กี่ตัวก็ได้ แต่จะเรียกใช้งานแค่ 2 ตัวแรกเท่านั้น
+        // // Rest Parameter(...) เก็นพารามิเตอร์ไว้ในรูปแบบ array
+        // function sumAll(...args) {
+        //     let sum  = 0;
+        //     for(let arg of args){
+        //         sum += arg;
+        //     }
+        //     return sum;
+        // }
+        // console.log(sumAll(1));
+        // console.log(sumAll(1,2,3,4));
+        // console.log(sumAll(1,2,3,4,5,6,7,8,9)); //สามารถใส่พารามิเตอร์ไปกี่ตัวก็ได้เพราะจะถูกเก็บไว้ใน array
+
+        // function sum(a,b,...arr) {
+        //     let standardValue = a+b;
+        //     for(let item of arr) {
+        //         standardValue += item;
+        //     }
+        //     return standardValue;
+        // }
+        // console.log(sum(1,2));
+        // console.log(sum(1,2,3));
+        // console.log(sum(1,2,3,4));
+        // // rest parameter ห้ามคั่นกลาง เช่น (a, ...arr, b) ไม่สามารถทำได้
+
+        // // ตัวแปร argument
+        // function showName() {
+        //     console.log(arguments[0]);
+        //     console.log(arguments[1]);
+        //     console.log(arguments.length);
+        // }
+        // console.log(showName("john", "wick")); //ตัวแปร argument จะถูกสร้างโดยอัตโนมัติแม้ว่าได้กำหนดพารามิเตอร์ไว้ในฟังก์ชัน
+
+        // //spread syntax คือการแตก array ให้เป็นพารามิเตอร์
+        // let arr1 = [1, -2, 3, 4];
+        // let arr2 = [8, 9, 15];
+        // console.log(Math.max(...arr1));
+        // console.log(Math.max(...arr2));
+        // let arr3 = [...arr1, ...arr2];
+        // console.log(arr3);
+        // let obj = {
+        //     name: "John",
+        //     age: 30
+        // };
+        // let obj2 ={...obj}
+        // console.log(obj);
+        // console.log(obj2);
+        // obj2.name = "Jame";
+        // console.log(obj);
+        // console.log(obj2); // obj2 จะไม่ reference ไปที่เดียวกับ obj เมื่อทำการแก้ไขค่าก็จะไม่มีผล
+
+        // // destructuring
+        // let arr = ["walt", "white"];
+        // let fName = arr[0];
+        // let lName = arr[1];
+        // console.log(fName + " " +lName);
+        // let [fName2, lName2] = arr;
+        // console.log(fName2);
+        // console.log(lName2);
+        // let[one, two, three] = new Set([1,2,3]);
+        // let user = {
+        //     name: "John",
+        //     age: 30
+        // };
+        // for(let[key, value] of Object.entries(user)){
+        //     console.log(key + ":" + value);
+
+        // }
+        // let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+        // console.log(name1);
+        // console.log(name2);
+        // for(arrRest of rest){
+        //     console.log(arrRest);
+        // }
+
+        // // Object destructuring
+        // // let {var1, var2, ...} = object{ var1: ... , var2: ...};
+        // // ต้องตั้งชือตัวแปรให้ตรงกับ key
+        // let option = {
+        //     title: "Menu",
+        //     width: 100,
+        //     height: 200,
+        // };
+        // let {title, width, height} = option; // ชื่อตัวแปรต้องตรงกับ key
+        // console.log(title);
+        // console.log(width);
+        // console.log(height);
+        // // let {title, ...rest} = option;
+        // // console.log(title);
+        // // console.log(rest.width);
+        // // console.log(rest.height);
+
+
+        // // Nest Destructuring
+        // let options = {
+        //     size: {
+        //         width: 100,
+        //         height: 200
+        //     },
+        //     items: ["cake", "donut"],
+        //     extra: true
+        // };
+        // let {size:{width, height}, items:[item1, item2], extra}  = options;
+        // console.log(width);
+        // console.log(height);
+        // console.log(item1);
+        // console.log(item2);
+        // console.log(extra);
+
+        // // getter setter
+        // // getter อ่านค่า ใช้คำว่า get
+        // // setter กำหนดค่า ใช้คำว่า set
+        // let user = {
+        //     name: "John",
+        //     surname: "Smith",
+
+        //     get fullName() {
+        //         return `${this.name} ${this.surname}`;
+        //     },
+
+        //     set fullName(value){
+        //         [this.name, this.surname] = value.split(" ");
+        //     }
+        // };
+        // console.log(user.fullName);  //เรียกใช้ได้เหมือนตัวแปร
+        // user.fullName = "Alice Cooper";
+        // console.log(user.fullName);
+
+        // // inheritance 
+        // let animal = {
+        //     eat : true,
+        //     walk() {
+        //         console.log("Animal Walk");
+        //     }
+        // };
+        // let rabbit = {
+        //     jumps: true,
+        //     __proto__: animal   // rabbit ได้ถูก inheritance จาก animal
+        // };
+        // rabbit.walk = function() {   // rabbit สามารถนิยาม function walk เป็นของตัวเองได้
+        //     console.log("Rabbit Walk");
+        // };
+        // let longEar = {
+        //     earLength: 10,
+        //     __proto__: rabbit   // longEar ได้ถูก inheritance จาก rabbit
+        // };  
+        // console.log(rabbit.eat);     // rabbit สามารถเรียกใช้ property ของ animal ได้
+        // console.log(rabbit.jumps); 
+        // rabbit.walk();
+        // console.log(longEar.jumps);
+        // longEar.walk();
+
+        // // this : this is always the object before the dot
+        // let animal = {
+        //     name : "animal",
+        //     bark : function (params) {
+        //         console.log(this.name + "barking"); // object before the dot
+        //     }
+        // };
+        // animal.bark();  // object หน้า this คือ animal
+
+        // let rabbit = {
+        //     name: "rabbit",
+        //     __proto__: animal
+        // };
+        // rabbit.bark(); // object หน้า this คือ rabbit
+
+        // // F.prototype
+        // let animal = {
+        //     eat: true
+        // }
+        // function Rabbit(name) {
+        //     this.name = name;
+        // }
+        // Rabbit.prototype = animal;
+        // let rabbit = new Rabbit("White rabbit");
+        // console.log(rabbit.name);
+        // console.log(rabbit.eat);
+
+        // let animal2 = {
+        //     bark: true
+        // };
+        // Rabbit.prototype = animal2;
+        // let rabbit2 = new Rabbit("Dark rabbit");
+        // console.log(rabbit2);
+
+        // // Native prototype ฟังก์ชัน build-in ที่สามารถเรียกใช้ได้เลย
+        // let obj = {};
+        // alert(obj);
+
+        // // primitive => string, boolean, number
+        // let number = 1;
+        // alert(number.toString());  // จะสร้าง object มาห่อหุ้มและเมื่อใช้เสร็จก็จะทำลาย object ทิ้งไป
+
+        // // modern prototype 
+        // let animal = {
+        //     eat : true
+        // };
+
+        // let rabbit = Object.create(animal);
+        // console.log(rabbit.eat)
+
+
+        // let rabbit2 = Object.create(animal, {    //สร้าง property กำหนดมาใหม่ได้
+        //     jump: {
+        //         value: true
+        //     }
+        // });
+        // console.log(rabbit2.eat);
+        // console.log(rabbit2.jump);
+
+        // let clone = Object.create(Object.getPrototypeOf(animal),Object.getOwnPropertyDescriptor(animal));
+        // console.log(clone);
+
+        // // class
+        // class User{
+        //     constructor(name){
+        //         this.name = name;
+        //     }
+        //     sayHi() {
+        //         alert(this.name);
+        //     }
+        // }
+        // let user = new User("John");
+        // user.sayHi();
+
+        // class Animal{
+        //     constructor(name){
+        //         this.speed = 0;
+        //         this.name = name;
+        //     }
+        //     run(speed){
+        //         this.speed = speed;
+        //         console.log(this.name + " runs with speed " + this.speed);
+        //     }
+        //     stop() {
+        //         this.speed = 0;
+        //         console.log(this.name + " stands still");
+        //     }
+        // };
+
+        // class Rabbit extends Animal{
+        //     jump(){
+        //         console.log(this.name + " jumps");
+        //     }
+        // }
+
+        // let animal2 = new Rabbit("White Rabbit");
+        // animal2.run(10);
+        // animal2.stop();
+        // animal2.jump();
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
